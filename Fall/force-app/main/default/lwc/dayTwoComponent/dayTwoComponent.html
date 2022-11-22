@@ -1,0 +1,88 @@
+<template>
+    Name:&nbsp;
+    <lightning-formatted-name
+    first-name={contact.firstName}
+    last-name={contact.lastName}
+    format="Short"
+
+    ></lightning-formatted-name><br/>
+
+    Phone:&nbsp;
+    <lightning-formatted-phone 
+        value={contact.phone}
+    ></lightning-formatted-phone><br/>
+
+    Email:&nbsp;
+    <lightning-formatted-email
+        value={contact.email}
+    ></lightning-formatted-email><br/>
+
+    Age:&nbsp;
+    <lightning-formatted-number 
+    value={contact.age}>
+    </lightning-formatted-number><br/>
+
+    Salary:&nbsp;
+    <lightning-formatted-number 
+    value={contact.salary}
+    format-style="currency"
+    currency-code="USD"
+    ></lightning-formatted-number><br/>
+
+    <div style="display: inline-flex;">
+    CheckBox:&nbsp;
+    <lightning-input
+    type="checkbox"
+    label="Is Salaried"
+    name="input1"
+    value={contact.isSalaried}
+    ></lightning-input>
+    </div>
+
+    <hr/>
+    <!--Handling array of elements-->
+    <template for:each={contactlist} for:item="contact" >
+        <div key={contact.email}>
+            Name:&nbsp;
+    <lightning-formatted-name
+    first-name={contact.firstName}
+    last-name={contact.lastName}
+    format="Short"
+
+    ></lightning-formatted-name><br/>
+
+    Phone:&nbsp;
+    <lightning-formatted-phone 
+        value={contact.phone}
+    ></lightning-formatted-phone><br/>
+
+    Email:&nbsp;
+    <lightning-formatted-email
+        value={contact.email}
+    ></lightning-formatted-email><br/>
+
+    Age:&nbsp;
+    <lightning-formatted-number 
+    value={contact.age}>
+    </lightning-formatted-number><br/>
+
+    Salary:&nbsp;
+    <lightning-formatted-number 
+    value={contact.salary}
+    format-style="currency"
+    currency-code="USD"
+    ></lightning-formatted-number><br/>
+
+    <div style="display: inline-flex;">
+    CheckBox:&nbsp;
+    <lightning-input
+    type="checkbox"
+    label="Is Salaried"
+    name="input1"
+    value={contact.isSalaried}
+    ></lightning-input>
+    </div>
+      </div>
+    </template>
+ 
+</template>
